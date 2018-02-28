@@ -31,7 +31,7 @@ CodeOceanEditorPrompt = {
     submitPromptInput: function() {
         var input = $('#prompt-input');
         var message = input.val();
-        this.websocket.send(JSON.stringify({cmd: 'result', 'data': message}));
+        this.websocket.send(message);
         this.websocket.flush();
         input.val('');
         this.hidePrompt();
